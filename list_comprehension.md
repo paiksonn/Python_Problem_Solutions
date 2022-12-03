@@ -19,21 +19,21 @@
 
 Найти все числа от 1 до 1000, которые делятся на 17
 ```python
-result = [digit for digit in range(1, 1001) if digit % 17 == 0]
+result = [x for x in range(1, 1001) if x % 17 == 0]
 ```
 
 ## Task 2
 
 Найти все числа от 1 до 1000, которые содержат в себе цифру 2
 ```python
-result = [digit for digit in range(1, 1001) if '2' in str(digit)]
+result = [x for x in range(1, 1001) if '2' in str(x)]
 ```
 
 ## Task 3
 
 Найти все числа от 1 до 10000, которые являются палиндромом
 ```python
-result = [digit for digit in range(1, 10001) if str(digit) == str(digit)[::-1]]
+result = [x for x in range(1, 10001) if str(x) == str(digit)[::-1]]
 ```
 
 ## Task 4
@@ -41,8 +41,8 @@ result = [digit for digit in range(1, 10001) if str(digit) == str(digit)[::-1]]
 Посчитать количество пробелов в строке
 ```python
 string = "A simple sentence has the most basic elements that make it a sentence: a subject a verb and a completed thought"
-result = string.count(' ')
-result = len([sign for sign in string if sign == ' '])
+#result = string.count(' ')
+result = len([x for x in string if x == ' '])
 ```
 
 ## Task 5
@@ -50,7 +50,7 @@ result = len([sign for sign in string if sign == ' '])
 Есть любая последовательность непробельных символов латинского алфавита, удалить все гласные из этого слова
 ```python
 word = 'eyrtYuD'
-result = ''.join([letter for letter in word if letter.lower() not in 'aeiouy'])
+result = ''.join([x for x in word if x.lower() not in 'aeiouy'])
 ```
 
 ## Task 6
