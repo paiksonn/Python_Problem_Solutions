@@ -58,7 +58,7 @@ result = ''.join([x for x in word if x.lower() not in 'aeiouy'])
  На входе строка со словами, разделенными через 1 пробел. Найти все слова, длина которых не больше 5
 ```python
 string = "A simple sentence has the most basic elements that make it a sentence: a subject a verb and a completed thought"
-result = [word for word in string.split() if len(word) <= 5]
+result = [x for x in string.split() if len(x) <= 5]
 ```
 
 ## Task 7
@@ -66,7 +66,7 @@ result = [word for word in string.split() if len(word) <= 5]
 На входе строка со словами, разделенными через 1 пробел. Получить словарь, где в качестве ключа используется само слово, а в значении длина этого слова.
 ```python
 string = "A simple sentence has the most basic elements that make it a sentence: a subject a verb and a completed thought"
-result = {word: len(word) for word in string.split()}
+result = {x: len(x) for x in string.split()}
 ```
 
 ## Task 8
@@ -99,7 +99,7 @@ result = {point: (point[0] ** 2 + point[1] ** 2) ** (1/2) for point in points if
 
 Возвести в квадрат все четные числа от 2 до 27. На выходе список.
 ```python
-result = [digit ** 2 for digit in range(2, 28, 2)]
+result = [odd ** 2 for odd in range(2, 28, 2)]
 ```
 
 ## Task 12
