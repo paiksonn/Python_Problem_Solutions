@@ -65,7 +65,7 @@ if __name__ == "__main__":
     --------------------------------------------------------------------------------------------------------------------------------------------
     
     
-    import csv
+import csv
 import json
 
 
@@ -93,7 +93,7 @@ class CsvToJsonConverter:
 
     def convert(self, file_reader: FileReader) -> str:
         data_csv = csv.DictReader(file_reader.file)
-        data_json = [json.dumps(d, indent=4) for d in data_csv]
+        data_json = [json.dumps(data, indent=4) for data in data_csv]
         return str(data_json)
 
 
