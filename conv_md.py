@@ -49,7 +49,7 @@ def convert_data(data):
 def main():
     content = read_data('solution.py')
     result = convert_data(content)
-    write_data('out.md', result)
+    write_data('result.md', result)
 
 
 
