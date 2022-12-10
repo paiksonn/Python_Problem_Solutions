@@ -27,7 +27,7 @@ class Complex_numbers:
 
     def __str__(self):
         if self.real == 0:
-            return 'i' + str(self.imaginary) 
+            return f'{self.imaginary}i' 
         if self.imaginary == 0:
             return str(self.real)
         if self.imaginary == 1:
@@ -35,6 +35,6 @@ class Complex_numbers:
         if self.imaginary == -1:
             return str(self.real) + '-' + 'i'
         if self.imaginary > 0:
-            return str(self.real) + '+' + 'i' + str(self.imaginary)
+            return f'{self.real} + {self.imaginary}i'
         if self.imaginary < 0:
-            return str(self.real) + '-' + 'i' + str(self.imaginary)
+            return f'{self.real} - {self.imaginary}i'
