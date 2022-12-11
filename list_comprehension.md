@@ -1,19 +1,19 @@
 + [Задача 1](#Задача-1)
-+ [Task 2](#Task-2)
-+ [Task 3](#Task-3)
-+ [Task 4](#Task-4)
-+ [Task 5](#Task-5)
-+ [Task 6](#Task-6)
-+ [Task 7](#Task-7)
-+ [Task 8](#Task-8)
-+ [Task 9](#Task-9)
-+ [Task 10](#Task-10)
-+ [Task 11](#Task-11)
-+ [Task 12](#Task-12)
-+ [Task 13](#Task-13)
-+ [Task 14](#Task-14)
-+ [Task 15](#Task-15)
-+ [Task 16](#Task-16)
++ [Задача 2](#Task-2)
++ [Задача 3](#Task-3)
++ [Задача 4](#Task-4)
++ [Задача 5](#Task-5)
++ [Задача 6](#Task-6)
++ [Задача 7](#Task-7)
++ [Задача 8](#Task-8)
++ [Задача 9](#Task-9)
++ [Задача 10](#Task-10)
++ [Задача 11](#Task-11)
++ [Задача 12](#Task-12)
++ [Задача 13](#Task-13)
++ [Задача 14](#Task-14)
++ [Задача 15](#Task-15)
++ [Задача 16](#Task-16)
 
 ## Задача 1
 
@@ -22,21 +22,21 @@
 result = [x for x in range(1, 1001) if x % 17 == 0]
 ```
 
-## Task 2
+## Задача 2
 
 Найти все числа от 1 до 1000, которые содержат в себе цифру 2
 ```python
 result = [x for x in range(1, 1001) if '2' in str(x)]
 ```
 
-## Task 3
+## Задача 3
 
 Найти все числа от 1 до 10000, которые являются палиндромом
 ```python
 result = [x for x in range(1, 10001) if str(x) == str(digit)[::-1]]
 ```
 
-## Task 4
+## Задача 4
 
 Посчитать количество пробелов в строке
 ```python
@@ -45,7 +45,7 @@ string = "A simple sentence has the most basic elements that make it a sentence:
 result = len([x for x in string if x == ' '])
 ```
 
-## Task 5
+## Задача 5
 
 Есть любая последовательность непробельных символов латинского алфавита, удалить все гласные из этого слова
 ```python
@@ -53,7 +53,7 @@ word = 'eyrtYuD'
 result = ''.join([x for x in word if x.lower() not in 'aeiouy'])
 ```
 
-## Task 6
+## Задача 6
 
  На входе строка со словами, разделенными через 1 пробел. Найти все слова, длина которых не больше 5
 ```python
@@ -61,7 +61,7 @@ string = "A simple sentence has the most basic elements that make it a sentence:
 result = [x for x in string.split() if len(x) <= 5]
 ```
 
-## Task 7
+## Задача 7
 
 На входе строка со словами, разделенными через 1 пробел. Получить словарь, где в качестве ключа используется само слово, а в значении длина этого слова.
 ```python
@@ -69,7 +69,7 @@ string = "A simple sentence has the most basic elements that make it a sentence:
 result = {x: len(x) for x in string.split()}
 ```
 
-## Task 8
+## Задача 8
 
 На входе предложение со всеми пробельными и непробельными символами латинского алфавита. Получить словарь используемых букв в строке, то есть на выходе список уникальных букв.
 ```python
@@ -78,7 +78,7 @@ result = list(set([letter for letter in list(string) if letter in [chr(i) for i 
 result = list(dict.fromkeys([letter for letter in list(string) if letter in [chr(i) for i in range(97, 123)]]).keys())
 ```
 
-## Task 9
+## Задача 9
 
 На входе список чисел, получить список квадратов этих чисел / use map
 ```python
@@ -86,7 +86,7 @@ digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 result = list(map(lambda x: x * x, digits))
 ```
 
-## Task 10
+## Задача 10
 
 На входе список координат, например, [(1, 1), (2, 3), (5, 3)]. Найти все точки, которые принадлежат прямой y = 5 * x - 2. 
 На выходе получить словарь из самой точки и расстоянии до этой точки из начала координат (0, 0)
@@ -95,14 +95,14 @@ points = [(1, 1), (1, 3), (5, 3)]
 result = {point: (point[0] ** 2 + point[1] ** 2) ** (1/2) for point in points if point[1] == 5 * point[0] - 2}
 ```
 
-## Task 11
+## Задача 11
 
 Возвести в квадрат все четные числа от 2 до 27. На выходе список.
 ```python
 result = [odd ** 2 for odd in range(2, 28, 2)]
 ```
 
-## Task 12
+## Задача 12
 
 На входе список из координат точек на плоскости. Найти расстояние до самой удаленной точку от начала координат (0, 0) в первой четверти 
 ```python
@@ -110,7 +110,7 @@ points = [(1, 1), (1, 3), (5, 3)]
 result = max([(point[0] ** 2 + point[1] ** 2) ** (1/2) for point in points if point[0] > 0 and point[1] > 0])
 ```
 
-## Task 13
+## Задача 13
 
 На входе два списка чисел nums_first = [1, 2, 3, 5, 8] и nums_second = [2, 4, 8, 16, 32]. Получить пары сумм и разниц, [(3, -1), (6, -2), ...]
 ```python
@@ -119,7 +119,7 @@ nums_second = [2, 4, 8, 16, 32]
 result = [(digit_first + digit_second, digit_first - digit_second) for digit_first, digit_second in zip(nums_first, nums_second)]
 ```
 
-## Task 14
+## Задача 14
 
 На входе список строк из чисел, например, ['43141', '32441', '431', '4154', '43121']. Найти четные квадраты этих чисел. Ответ записать снова в список из строк, то есть сформировать обратно список строк, но уже отфильтровать все четные квадраты.
 ```python
@@ -127,7 +127,7 @@ digits_str = ['43141', '32441', '431', '4154', '43121']
 result = list(filter(lambda x: int(x)**2%2==0, digits_str))
 ```
 
-## Task 15
+## Задача 15
 
 Менеджер как обычно придумал свое представление данных, а нам оно не подходит. Мы хотим получить нормальную таблицу, чтобы импортировать в csv.
 
@@ -157,7 +157,7 @@ result = [{row.split(',')[0]: row.split(',')[i] for row in input_str.split('\n')
 
 ```
 
-## Task 16
+## Задача 16
 
 Получить сумму по столбцам у двумерного списка
 ```python
