@@ -37,8 +37,8 @@ class ComplexTask(Task):
 
 
 class Status(Enum):
-    process = "IN PROCESS"
-    ready = "READY"
+    process = "I`m tring my best (in process)"
+    ready = "All done, sir"
 
     
 class TaskManager:
@@ -159,7 +159,7 @@ class TaskManager:
         if task in self.tasks.values():
             return task
         elif task in self.subtasks.values():
-            if "IN PROCESS" not in self.complex_tasks[task.parent_id].subtasks:
+            if "I`m tring my best (in process)" not in self.complex_tasks[task.parent_id].subtasks:
                 self.complex_tasks[task.parent_id].status = Status.ready.value
         elif task in self.complex_tasks.values():
             for i in task.subtasks:
