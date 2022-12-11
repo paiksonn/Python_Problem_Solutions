@@ -124,7 +124,7 @@ result = [(digit_first + digit_second, digit_first - digit_second) for digit_fir
 На входе список строк из чисел, например, ['43141', '32441', '431', '4154', '43121']. Найти четные квадраты этих чисел. Ответ записать снова в список из строк, то есть сформировать обратно список строк, но уже отфильтровать все четные квадраты.
 ```python
 digits_str = ['43141', '32441', '431', '4154', '43121']
-result = [str(int(digit) ** 2) for digit in digits_str if (int(digit) ** 2) % 2 == 0]
+result = list(filter(lambda x: int(x)**2%2==0, digits_str))
 ```
 
 ## Task 15
@@ -137,6 +137,24 @@ grade,5,5,8,3
 subject,math,language,physics,math
 year,1999,2000,1995,1998"""
 result = [{row.split(',')[0]: row.split(',')[i] for row in input_str.split('\n')} for i in range(1, len(input_str.split('\n')[0].split(',')))]
+
+#print(result_str)
+"""[
+  {
+    'name': 'Petya',
+    'grade': '5'
+    'subject': 'math'
+    'year': '1999'
+  },
+  {
+    'name': 'Vasya',
+    'grade': '5'
+    'subject': 'language'
+    'year': '2000'
+  },
+  ...
+]"""
+
 ```
 
 ## Task 16
@@ -147,7 +165,9 @@ a = [[11.9, 12.2, 12.9],
     [15.3, 15.1, 15.1],
     [16.3, 16.5, 16.5],
     [17.7, 17.5, 18.1]]
-    
+
+# straight forward
 result = [sum([row[i] for row in a]) for i in range(len(a[0]))]
+# use yr brain
 result = list(map(sum, zip(*a)))
 ```
