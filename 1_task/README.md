@@ -39,3 +39,53 @@ def print_hello():
 ```
 ````
 </blockquote></details>
+
+### Пример 2
+
+<details><summary>Вход</summary><blockquote>
+
+solution.py
+
+```
+# title Print Greeting
+# description Напечатать на экран Greeting!
+# ---end----
+def print_greeting():
+    print('Greeting!')
+    
+```    
+ 
+out.md
+
+````
++ [Print Hello](#print-hello)
+## Print Hello
+Напечатать на экран Hello!
+```python 
+def print_hello():
+    print('Hello!')
+```
+````
+</blockquote></details>
+    
+<details><summary>Выход</summary><blockquote>
+
+out.md
+
+````
++ [Print Hello](#print-hello)
++ [Print Greeting](#print-greeting)
+## Print Hello
+Напечатать на экран Hello!
+```python 
+def print_hello():
+    print('Hello!')
+```
+## Print Greeting
+Напечатать на экран Greeting!
+```python 
+def print_greeting():
+    print('Greeting!')
+```
+````
+</blockquote></details>
