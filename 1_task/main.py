@@ -7,7 +7,7 @@ def read_data(file_name):
     return content
 
 def write_data(file_name, data):
-    file = open(file_name, 'w')
+    file = open(file_name, 'a+')
     content = '\n'.join(data)
     file.write(data)
     file.close()
