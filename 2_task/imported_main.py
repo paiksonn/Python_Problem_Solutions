@@ -17,7 +17,7 @@ class FileWriter:
         self.output_file = output_file
 
     def write_data(self, data):
-        file = open(self.output_file, 'w')
+        file = open(self.output_file, 'a+')
         file.write(data)
         file.close()
 
